@@ -1,5 +1,3 @@
-// mouseEffect.js
-
 export function applyMouseEffect() {
   const handleOnMouseMove = (e) => {
     const { currentTarget: target } = e;
