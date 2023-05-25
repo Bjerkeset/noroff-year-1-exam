@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/images/logo-favicon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hire web developer team" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, strapi" />
+    <meta name="author" content="B.Bjerkeset" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../css/assets/navbar.css" />
+    <script defer type="module" src="../js/blogs.js"></script>
+    <!-- <script defer src="../../../backend/sanity.cli.js"></script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Blog | Api-ary</title>
+  </head>
+  <body class="animate__animated animate__fadeIn">
+    <header class="l-header">
+      <nav class="navbar__container">
+        <a href="../index.html">
+          <div class="branding__container"></div>
+        </a>
+        <div class="navbar__list">
+          <ul class="navbar__list-ul">
+            <li><a class="navbar__a" href="../index.html">HOME</a></li>
+            <li><a class="navbar__a" href="./blogs.html">BLOG</a></li>
+            <li><a class="navbar__a" href="./about.html">ABOUT</a></li>
+            <li>
+              <a class="navbar__a" href="./contact.html">CONTACT</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <div class="hamburger__bar"></div>
+            <div class="hamburger__bar"></div>
+            <div class="hamburger__bar"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <section role="list" class="list__section">
+        <div class="section__head">
+          <div class="section__head-text section__head__text--h4">
+            <h4>Blog Posts</h4>
+          </div>
+          <div class="section__head-text section__head__text--h2">
+            <h1>See our jurney</h1>
+          </div>
+        </div>
+        <div class="control-panel">
+          <div class="search__container">
+            <input type="text" id="search" placeholder="Search blog posts..." />
+          </div>
+          <div class="filter__container">
+            <select id="filter">
+              <option value="">Filter by category</option>
+              <option value="tech">Tech</option>
+              <option value="lifestyle">Lifestyle</option>
+              <option value="business">Business</option>
+              <!-- Add more categories as needed -->
+            </select>
+            <select id="sort">
+              <option value="">Sort by</option>
+              <option value="date">Date</option>
+              <option value="title">Title</option>
+              <!-- Add more sorting options as needed -->
+            </select>
+          </div>
+        </div>
+
+        <div id="js-list-container"></div>
+        <div id="js-loading-indicator" class="loading-indicator"></div>
+        <div id="js-error-container"></div>
+      </section>
+      <div class="divider__div"></div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="footer-upper__container">
+        <div class="contact-info__container">
+          <ul class="contact-info__list">
+            <a href="mailto:webmaster@example.com"
+              ><li class="contact-info__list-item">
+                <i class="fa-solid fa-envelope"></i>
+                mail@email.com
+              </li></a
+            >
+            <a href="tel:004790054122"
+              ><li class="contact-info__list-item">
+                <i class="fa-solid fa-phone"></i> +47 900 54 122
+              </li></a
+            >
+            <a
+              href="https://www.google.com/maps/place/Torshovgata+55,+0476+Oslo/@59.9327264,10.766966,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e401d8a3163:0x3d2997d80a125147!8m2!3d59.9327237!4d10.7695409"
+              ><li class="contact-info__list-item">
+                <i class="fa-solid fa-map-location"></i> Torshovgata 55
+              </li></a
+            >
+          </ul>
+        </div>
+        <div class="social-links__container">
+          <ul class="sosial-links__list">
+            <a href="https://discord.com/"
+              ><li class="sosial-links__list-item">
+                <i class="fa-brands fa-discord"></i></li
+            ></a>
+            <a href="https://twitter.com/"
+              ><li class="sosial-links__list-item">
+                <i class="fa-brands fa-twitter"></i></li
+            ></a>
+            <a href="https://github.com/bjerkeset"
+              ><li class="sosial-links__list-item">
+                <i class="fa-brands fa-github"></i></li
+            ></a>
+          </ul>
+        </div>
+        <div class="footer-nav__container">
+          <ul class="footer-nav__list">
+            <a href="./index.html"
+              ><li class="footer-nav__list-item">HOME</li></a
+            >
+            <a href="./pages/blogs.html"
+              ><li class="footer-nav__list-item">BLOG</li></a
+            >
+            <a href="./pages/about.html"
+              ><li class="footer-nav__list-item">ABOUT</li></a
+            >
+            <a href="./pages/contact.html"
+              ><li class="footer-nav__list-item">CONTACT</li></a
+            >
+          </ul>
+        </div>
+      </div>
+      <div class="footer-lower__container">
+        <p>@ 2023 Untitled UI. ALL rights reserved</p>
+        <p>Created with ❤️ by B. Bjerkeset</p>
+      </div>
+    </footer>
+  </body>
+</html>

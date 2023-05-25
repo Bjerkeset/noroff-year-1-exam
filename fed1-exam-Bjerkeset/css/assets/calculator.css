@@ -1,0 +1,235 @@
+.calculator__section {
+  border-top: 1px solid #3b3a3b;
+  min-height: 100vh;
+}
+
+.calculator__container {
+  /* background-color: rgb(107, 131, 152); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60vh;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.calculator__wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* width: 750px; */
+  color: var(--clr-h4);
+  /* background-color: #1c1d22; */
+  height: 500px;
+  overflow: hidden;
+}
+
+.calculator {
+  background-color: #1c1d22;
+  display: flex;
+  border-radius: 25px;
+  border: 2px solid rgba(242, 153, 74, 0.3);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../../assets/images/calculator-50-opacity.png);
+  background-position: center;
+  background-size: cover;
+  width: clamp(300px, 90vw, 500px);
+
+  height: 500px;
+  transition: all 0.2s ease-in;
+}
+
+.calculator__intro-text p {
+  color: white;
+  padding-top: 1rem;
+}
+
+.calculator__h2 {
+  /* align-self: flex-start; */
+  /* background-color: #1c1d22; */
+  margin-bottom: 350px;
+  border-bottom: 2px solid #3b3a3b;
+}
+
+.calculator__h2 h2,
+.calculator__intro-text p {
+  color: #c3c1c3;
+}
+/* 
+.start__button button {
+  border: 2px solid var(--clr-btn-main);
+  background: transparent;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.start__button button .button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.start__button button::before,
+.start__button button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  transition: transform 0.5s;
+  z-index: 1;
+}
+
+.start__button button::before {
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.start__button button::after {
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.start__button button:hover .button-text {
+  color: white;
+}
+
+.start__button button:hover::before {
+  transform: scaleX(1);
+}
+
+.start__button button:hover::after {
+  transform: scaleX(1);
+} */
+
+.question {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  padding: 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(-100%);
+  /* overflow: hidden; */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in;
+  backdrop-filter: blur(10px);
+}
+.calculator.active,
+.question {
+  width: clamp(300px, 90vw, 750px);
+  /* height: -100px; */
+}
+
+.calculator.active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.question__h2 {
+  /* background-color: #3b3a3b; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.question__h2 h2 {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  text-align: center;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-image: var(--clr-gradient-background-main);
+  padding: 4rem;
+  /* height: 1000px; */
+  /* width: clamp(300px, 90vw, 750px); */
+  /* width: inherit; */
+  /* height: calc(inherit + 5rem); */
+  /* padding-top: 5rem; */
+  border-radius: 10px;
+  /* width: inherit; */
+  /* height: inherit; */
+  /* transition: all 1s ease-in-out; */
+}
+.result h2 {
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+.result p {
+  font-size: 2rem;
+  border: 2px solid #369768;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+.result a {
+  color: inherit;
+  text-decoration: none;
+}
+.result a:visited {
+  color: inherit;
+}
+.question__radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 678px) {
+  .question__radio {
+    flex-direction: column;
+  }
+}
+
+.question__radio label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 170px;
+  height: 100px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.3s ease-in-out;
+  margin-right: 3px;
+}
+
+.question__radio:hover label {
+  opacity: 0.8; /* Set the opacity of all labels when the parent is hovered */
+  width: calc(170px - 2.5%); /* 10% decrease in width */
+}
+
+.question__radio label:hover {
+  opacity: 1; /* Set the opacity of the hovered label back to 1 */
+  width: calc(170px + 5%); /* 20% increase in width */
+  border: 2px solid green;
+}
+
+.question.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#result {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
