@@ -1,0 +1,73 @@
+.about__container {
+  display: flex;
+  margin: auto;
+  /* background-color: rgb(67, 67, 66); */
+  width: 90vw;
+  max-width: 1000px;
+  flex-direction: column;
+}
+
+.about__child {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 2rem;
+  /* gap: 2rem; */
+  /* background-color: rgb(93, 93, 93); */
+}
+.about__child h4 {
+  padding-bottom: 1rem;
+  font-size: var(--font-size-h4-main);
+  /* text-decoration: underline; */
+  color: var(--clr-btn-form);
+}
+.about__child p,
+li {
+  font-size: var(--font-size-about-p);
+  color: var(--clr-about-p);
+  line-height: 2rem;
+  /* padding: 1rem; */
+}
+
+li {
+  font-size: calc(var(--font-size-about-p) - 30%);
+  padding-bottom: 1rem;
+  list-style: disc;
+}
+
+.heading__container {
+}
+
+.heading__container p {
+  font-size: calc(var(--font-size-about-p) + 50%);
+  color: var(--clr-background-blog);
+}
+
+.our-journey__container {
+}
+
+.why-choose-us__container {
+}
+
+.bullet-points__wrapper {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(24, 24, 24); */
+}
+
+.our-expertise__container {
+}
+.our-expertise__container p {
+  padding-bottom: 2rem;
+  width: 80%;
+}
+.our-expertise__container li {
+  margin-left: 1.5rem;
+}
+
+.our-values__container {
+}
+
+.ending__container {
+}

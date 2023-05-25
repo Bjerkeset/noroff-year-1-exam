@@ -33,6 +33,7 @@
   --clr-btn-main: #3076f6;
   --clr-white: #fff;
   --clr-black: #000;
+  --clr-about-p: #e3dccd;
   --clr-h4: #dbdbdb;
 
   /* -------Sizes------- */
@@ -41,5 +42,6 @@
   --padding-btn-cta-main: clamp(5px, 2vw, 10px) clamp(16px, 2vw, 24px);
   --font-size-btn-cta-main: clamp(16px, 2vw, 24px);
   --font-size-card-p: clamp(16px, 1vw, 20px);
+  --font-size-about-p: clamp(14px, 1vw, 20px);
   --font-size-h4-main: clamp(20px, 2vw, 30px);
 }
