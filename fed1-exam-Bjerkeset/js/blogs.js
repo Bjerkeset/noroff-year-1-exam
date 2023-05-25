@@ -1,4 +1,5 @@
-import { applyMouseEffect } from "./assets/mouseeffect";
+import { applyMouseEffect } from "./assets/mouseEffect";
+
 import { toggleHamburgerMenu } from "./assets/navbar";
 
 applyMouseEffect();
