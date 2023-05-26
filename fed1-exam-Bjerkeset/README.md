@@ -57,34 +57,34 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
 - [x] As a customer, I want to see a carousel/slider on the home page to display the latest blog posts, so that I can quickly access and view the latest content.
 - [x] As a customer, I want to be able to click on a blog post and be taken to a page with specific details about that post, so that I can get more in-depth information about the topic.
-- [ ] As a customer, I want to be able to click on images in a blog post and see a larger version in a modal, so that I can view images in greater detail.
+- [x] As a customer, I want to be able to click on images in a blog post and see a larger version in a modal, so that I can view images in greater detail.
 - [x] As a customer, I want to be able to easily contact the website owners through a contact form, so that I can reach out with any questions or feedback.
 - [x] As a customer, I want to see error messages when I fill out the contact form incorrectly, so that I can correct my mistakes and successfully submit my message.
 
 ## End-user success criteria (Optional - 100%)
 
 - [x] End-user can search for a specific item.
-- [ ] End-user can filter the list.
-- [ ] End-user can sort list by;
-  - [ ] Name ascending order
-  - [ ] Name descending order
+- [x] End-user can filter the list.
+- [x] End-user can sort list by;
+  - [x] Name ascending order
+  - [x] Name descending order
 - [x] Confirmation modal after custumer submits a successful contact form.
 - [ ] End-user can auto-fill the contact form using the browser auto-fill.
-- [ ] End-user can auto-fill the contact form using a password manager.
+- [x] End-user can auto-fill the contact form using a password manager.
 - [x] Validation still works when End-user uses copy and pastes into input fields.
 - [x] End-user can see a postive feedback when they input correct info and pass validation.
 - [x] End-user can experience pleasant animations.
 - [ ] End-user needs to prove there are human using a captcha feature on the contact form.
-  - [ ] Each item in the list has a staggered animation.
+  - [x] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
 - [x] CSS uses variables
 - [x] Code is dry - There are no repeating functions, variables.
 - [x] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
-- [ ] As a stakeholder, I want to view the website analytics.
+- [x] As a stakeholder, I want to view the website analytics.
 - [x] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
-- [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
-- [ ] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
+- [x] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
+- [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [x] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
 - [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
@@ -158,5 +158,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- Bendik Bjerkeset (@Bjerkeset)
 - Monde Sineke (@S3ak)

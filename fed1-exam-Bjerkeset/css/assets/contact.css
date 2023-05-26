@@ -22,6 +22,7 @@
   margin: auto 0 auto auto;
   justify-content: center;
   align-items: center;
+  animation: fade-in 0.5s ease-in-out forwards;
 }
 .success-text {
   padding-top: 1rem;

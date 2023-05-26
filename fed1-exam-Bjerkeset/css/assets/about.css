@@ -57,6 +57,7 @@ li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
   /* background-color: rgb(24, 24, 24); */
 }
 

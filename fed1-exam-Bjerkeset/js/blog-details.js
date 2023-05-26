@@ -1,5 +1,7 @@
 import sanityClient from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
 import { toggleHamburgerMenu } from "./assets/navbar";
+
 const loadingIndicator = document.getElementById("js-loading-indicator");
 const errorContainer = document.getElementById("js-error-container");
 const listContainer = document.getElementById("js-list-container");
@@ -12,8 +14,24 @@ const urlParams = new URLSearchParams(window.location.search);
 const postSlug = urlParams.get("slug");
 
 toggleHamburgerMenu();
+
+// define your sanity client configuration
+const sanityConfig = {
+  projectId: "npd35udx",
+  dataset: "production",
+};
+
+// instantiate the client
+const clientOne = sanityClient(sanityConfig);
+
+//Image builder from sanity
+function getUrlFromReference(ref) {
+  const builder = imageUrlBuilder(clientOne); // use the client you've just instantiated
+  return builder.image(ref).url();
+}
+
 export function generateCardHTML(post) {
-  const { title, author, date, excerpt, body } = post;
+  const { title, author, date, excerpt, body, mainImage } = post;
 
   let bodyContent = "";
 
@@ -33,6 +51,9 @@ export function generateCardHTML(post) {
       bodyContent += `<span class="body-part odd">${tempContent}</span>`;
     }
   }
+
+  const imageUrl = getUrlFromReference(mainImage.asset._ref);
+  console.log("image url", imageUrl);
   return `
     <div class="blog__details " >
       <div class="card__details card__details--title">
@@ -40,6 +61,9 @@ export function generateCardHTML(post) {
       </div>
       <div class="card__details card__details--author">
         <p>By: ${author}</p>
+      </div>
+      <div id="expandable-image" class="card__details card__details--image">
+      <img src="${imageUrl}" alt="${title}">
       </div>
       <div class="card__details card__details--date">
         <p>Date: ${new Date(date).toLocaleDateString()}</p>
@@ -109,7 +133,18 @@ async function fetchBlogComments() {
     const data = await response.json();
     const comments = data.result;
 
-    commentsContainer.innerHTML = generateCommentsListHTML(comments);
+    const expandableImage = document.getElementById("expandable-image");
+
+    expandableImage.addEventListener("click", function (event) {
+      event.stopPropagation();
+      this.classList.toggle("expanded");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (expandableImage.classList.contains("expanded")) {
+        expandableImage.classList.remove("expanded");
+      }
+    });
 
     console.log("comments", comments);
   } catch (error) {
@@ -129,7 +164,6 @@ const client = sanityClient({
     "skeEGzdjNcjpyuisOLqITcpYRV1OAxIzoIClVGsAKI1pgOhFPvsbwkMM4e8SKMhFrBo8Sni40WVfL7l2SYKpsPV8Y3pUBkuFTE6gQywUR6w9YM4YYlrMcYxVsLbDH71Zec18vS7IbcDdPmteWDt7ceTXuMvF7D1GWpzz5QFgWOV2zHTE8pCs",
   useCdn: false, // to ensure fresh data
 });
-
 successMessage.style.display = "none";
 
 commentForm.addEventListener("submit", async function (event) {

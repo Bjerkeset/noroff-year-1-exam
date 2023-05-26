@@ -74,6 +74,7 @@ h4 {
 .hero__el--h4 {
   font-size: var(--font-size-heading-h4);
   color: var(--clr-h4);
+  max-width: 70vw;
 }
 
 .divider__div {
@@ -108,11 +109,19 @@ h4 {
 
 .scroll__button {
   background: none;
-  color: #a8682f;
+  color: var(--clr-details-main);
   font-size: 2.4rem;
   height: 50px;
   margin: auto;
   z-index: 102;
+}
+.scroll__button:hover {
+  color: #a8682f;
+}
+@media screen and (max-width: 1090px) {
+  .scroll__button {
+    display: none;
+  }
 }
 .scroll__button--right {
   transform: translateX(-950px);
@@ -395,6 +404,9 @@ option {
   height: 490px;
   display: flex;
   flex-direction: column;
+  animation: fade-in 0.3s ease-in forwards;
+}
+.blog__card {
 }
 
 .blog__card--blogs {
@@ -524,13 +536,12 @@ option {
 
 .footer-upper__container {
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-around;
   /* align-items: center; */
   height: auto;
   /* background-color: #3b3a3b; */
   /* margin: auto; */
-  flex-wrap: wrap-reverse;
+  /* flex-wrap: wrap; */
   padding: 1rem 0;
 }
 
@@ -545,6 +556,7 @@ option {
 .contact-info__container {
   display: flex;
   align-items: center;
+  /* flex-direction: column; */
   /* background-color: #b7b7b7; */
 }
 
@@ -605,6 +617,17 @@ option {
   /* padding: 10px 0 0 10px; */
   color: #3b3a3b;
   font-size: 0.8rem;
+}
+
+@media (max-width: 400px) {
+  .footer-upper__container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer-upper__container div {
+    padding: 1rem;
+  }
 }
 
 /* ------ Arrow ------ */

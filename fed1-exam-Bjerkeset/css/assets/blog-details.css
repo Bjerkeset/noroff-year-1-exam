@@ -31,6 +31,30 @@
   margin: auto;
 }
 
+.card__details--image {
+  /* width: 60%; */
+  margin: auto;
+}
+
+.card__details--image img {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.card__details--image.expanded img {
+  position: fixed;
+  top: 5%; /* Center the image */
+  left: 5%; /* Center the image */
+  width: 90vw;
+  height: 90vh;
+  object-fit: contain;
+  z-index: 100; /* Ensure the image is on top of everything else */
+}
+
+.card__details--image:hover {
+  cursor: pointer;
+}
+
 .card__details--date {
   /* background-color: lavender; */
   margin: auto;
@@ -83,17 +107,6 @@
   color: rgb(52, 186, 52);
   font-size: 2rem;
   animation: fade-in 0.3s ease-in-out backwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .comments__container {

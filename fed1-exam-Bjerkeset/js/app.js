@@ -125,6 +125,7 @@ async function fetchBlogPosts() {
     showBlogsButtonWrapper.className = "show-blogs__btn";
     showBlogsButtonWrapper.innerHTML = showBlogsButtonHTML;
     container.appendChild(showBlogsButtonWrapper);
+
     applyMouseEffect();
   } catch (error) {
     console.error("Error fetching blog posts:", error);
