@@ -27,11 +27,12 @@ li {
   font-size: var(--font-size-about-p);
   color: var(--clr-about-p);
   line-height: 2rem;
+  text-align: justify;
   /* padding: 1rem; */
 }
 
 li {
-  font-size: calc(var(--font-size-about-p) - 30%);
+  font-size: calc(var(--font-size-about-p) - 10%);
   padding-bottom: 1rem;
   list-style: disc;
 }
@@ -53,21 +54,41 @@ li {
 .bullet-points__wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   /* background-color: rgb(24, 24, 24); */
 }
 
 .our-expertise__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  max-width: 90vw;
 }
 .our-expertise__container p {
   padding-bottom: 2rem;
-  width: 80%;
 }
 .our-expertise__container li {
   margin-left: 1.5rem;
 }
 
 .our-values__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  max-width: 90vw;
+  /* width: 50%; */
 }
 
 .ending__container {
+  padding-bottom: 7rem;
+}
+
+.ending__container button {
+  margin-bottom: 2rem;
 }

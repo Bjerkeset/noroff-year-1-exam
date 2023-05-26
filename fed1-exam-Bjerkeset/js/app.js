@@ -1,6 +1,5 @@
 // import { applyMouseEffect } from "./assets/mouseeffect";
 import { applyMouseEffect } from "./assets/mouseEffect";
-
 import { toggleHamburgerMenu } from "./assets/navbar";
 
 applyMouseEffect();
@@ -58,11 +57,23 @@ async function fetchBlogPosts() {
     const data = responseData.result;
     const container = listContainer;
 
+    //Create and append card container
     const cardContainer = document.createElement("div");
     cardContainer.className = "card__container";
     container.appendChild(cardContainer);
 
-    for (let i = 0; i < 5; i++) {
+    //Create and append carusell left buttons
+    const scrollLeftButton = document.createElement("button");
+    scrollLeftButton.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
+
+    scrollLeftButton.className = "scroll__button scroll__button--left ";
+    cardContainer.appendChild(scrollLeftButton);
+
+    scrollLeftButton.addEventListener("click", function () {
+      cardContainer.scrollLeft += 1000;
+    });
+
+    for (let i = 0; i < 6; i++) {
       const post = data[i];
       const cardHTML = generateCardHTML(post);
 
@@ -71,11 +82,43 @@ async function fetchBlogPosts() {
       blogCardWrapper.innerHTML = cardHTML;
       cardContainer.appendChild(blogCardWrapper);
 
+      const maxScrollLeft =
+        cardContainer.scrollWidth - cardContainer.offsetWidth;
+      console.log(maxScrollLeft);
+
       //Add an on click event for blog cards.
       blogCardWrapper.addEventListener("click", function () {
         window.location.href = `../pages/blog-detail.html?slug=${post.slug.current}`;
       });
     }
+
+    //Create and append carusell right buttons
+    const scrollRightButton = document.createElement("button");
+    scrollRightButton.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
+    scrollRightButton.className =
+      "scroll__button scroll__button--right is-hidden";
+    cardContainer.appendChild(scrollRightButton);
+
+    function toggleScrollButtonVisibility() {
+      if (cardContainer.scrollLeft <= 5) {
+        scrollRightButton.classList.add("is-hidden");
+        scrollLeftButton.classList.remove("is-hidden");
+      } else if (cardContainer.scrollLeft >= 830) {
+        scrollRightButton.classList.remove("is-hidden");
+        scrollLeftButton.classList.add("is-hidden");
+      } else {
+        scrollRightButton.classList.add("is-hidden");
+        scrollLeftButton.classList.add("is-hidden");
+      }
+    }
+
+    // Add event listener for scroll event on cardContainer
+    cardContainer.addEventListener("scroll", toggleScrollButtonVisibility);
+
+    scrollRightButton.addEventListener("click", function () {
+      console.log("right click");
+      cardContainer.scrollLeft -= 1000;
+    });
 
     const showBlogsButtonHTML = generateShowBlogsButtonHTML();
     const showBlogsButtonWrapper = document.createElement("div");
@@ -112,90 +155,3 @@ const cards = document.querySelectorAll(".services__card");
 for (let i = 0; i < cards.length; i++) {
   observer.observe(cards[i]);
 }
-
-// Mouse effect
-// const handleOnMouseMove = (e) => {
-//   const { currentTarget: target } = e;
-
-//   const rect = target.getBoundingClientRect(),
-//     x = e.clientX - rect.left,
-//     y = e.clientY - rect.top;
-
-//   target.style.setProperty("--mouse-x", `${x}px`);
-//   target.style.setProperty("--mouse-y", `${y}px`);
-// };
-
-// for (const card of document.querySelectorAll(".blog__card")) {
-//   card.onmousemove = (e) => handleOnMouseMove(e);
-// }
-
-// // Mouse effect logic
-// function applyMouseEffect() {
-//   const handleOnMouseMove = (e) => {
-//     const { currentTarget: target } = e;
-
-//     const rect = target.getBoundingClientRect(),
-//       x = e.clientX - rect.left,
-//       y = e.clientY - rect.top;
-
-//     target.style.setProperty("--mouse-x", `${x}px`);
-//     target.style.setProperty("--mouse-y", `${y}px`);
-//   };
-//   for (const card of document.querySelectorAll(".blog__card")) {
-//     card.onmousemove = (e) => handleOnMouseMove(e);
-//   }
-// }
-
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
-
-// TODO: Get DOM elements from the DOM
-
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
-
-// TODO: Fetch and Render the list to the DOM
-
-// TODO: Create event listeners for the filters and the search
-
-/**
- * TODO: Create an event listener to sort the list.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L91
- */
-
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
-
-// TODO: Fetch an array of objects from the API
-
-/*
-============================================
-Helper functions
-https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L154
-============================================
-*/
-
-/**
- * TODO: Create a function to filter the list of item.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L135
- * @param {item} item The object with properties from the fetched JSON data.
- * @param {searchTerm} searchTerm The string used to check if the object title contains it.
- */
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */

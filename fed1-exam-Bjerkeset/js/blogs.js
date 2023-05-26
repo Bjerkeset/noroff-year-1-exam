@@ -1,5 +1,4 @@
 import { applyMouseEffect } from "./assets/mouseEffect";
-
 import { toggleHamburgerMenu } from "./assets/navbar";
 
 applyMouseEffect();
@@ -10,6 +9,7 @@ const loadingIndicator = document.getElementById("js-loading-indicator");
 const errorContainer = document.getElementById("js-error-container");
 const search = document.getElementById("search");
 const sortSelect = document.getElementById("sort");
+const authorFilter = document.getElementById("filter-select");
 
 //Keeps track of posts to be rendered.
 let currentPosts = 6;
@@ -89,9 +89,25 @@ function renderPosts(posts) {
   const cardContainer = document.createElement("div");
   cardContainer.className = "card__container blog__container--blogs";
   container.appendChild(cardContainer);
-  // The Math.min is to only access as many posts as exists. If there are fewer than currentPosts, it will access all of them.
-  for (let i = 0; i < Math.min(currentPosts, posts.length); i++) {
-    const post = posts[i];
+
+  // filter if an author is selected
+  const selectedAuthor = authorFilter.value.trim();
+  let filteredPosts = posts;
+  if (selectedAuthor) {
+    filteredPosts = posts.filter((post) => post.author === selectedAuthor);
+  }
+
+  // sort ascending and descending
+  const sortOption = sortSelect.value;
+  if (sortOption === "ascending") {
+    filteredPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+  } else if (sortOption === "descending") {
+    filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  }
+
+  // The Math.min is to only access as many posts as exist. If there are fewer than currentPosts, it will access all of them.
+  for (let i = 0; i < Math.min(currentPosts, filteredPosts.length); i++) {
+    const post = filteredPosts[i];
     const cardHTML = generateCardHTML(post);
     // Create a blog card and append it to the card container
     const blogCardWrapper = document.createElement("div");
@@ -103,6 +119,11 @@ function renderPosts(posts) {
     blogCardWrapper.addEventListener("click", function () {
       window.location.href = `../pages/blog-detail.html?slug=${post.slug.current}`;
     });
+
+    // Show or hide the blog card based on author filter
+    if (selectedAuthor && post.author !== selectedAuthor) {
+      blogCardWrapper.style.display = "none";
+    }
   }
 
   // Show button functionality
@@ -111,7 +132,7 @@ function renderPosts(posts) {
   showBlogsButtonWrapper.className = "show-blogs__btn";
   showBlogsButtonWrapper.innerHTML = showBlogsButtonHTML;
   container.appendChild(showBlogsButtonWrapper);
-  if (currentPosts < posts.length) {
+  if (currentPosts < filteredPosts.length) {
     // Renders six more posts as "show more" button is clicked.
     document
       .getElementById("js-view-all-post")
@@ -140,20 +161,11 @@ search.addEventListener("input", (event) => {
   renderPosts(filteredPosts);
 });
 
-// Sort functionality
-sortSelect.addEventListener("change", (event) => {
-  const sortValue = event.target.value;
-
-  // Copy the posts array
-  const sortedPosts = [...posts];
-
-  // Sort the posts
-  if (sortValue === "date") {
-    sortedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-  } else if (sortValue === "title") {
-    sortedPosts.sort((a, b) => a.title.localeCompare(b.title));
-  }
-
-  // Re-render the posts
-  renderPosts(sortedPosts);
+// Sort
+sortSelect.addEventListener("change", () => {
+  renderPosts(posts);
+});
+// Filter
+authorFilter.addEventListener("input", () => {
+  renderPosts(posts);
 });

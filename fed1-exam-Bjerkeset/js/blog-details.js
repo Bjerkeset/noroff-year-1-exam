@@ -4,12 +4,14 @@ const loadingIndicator = document.getElementById("js-loading-indicator");
 const errorContainer = document.getElementById("js-error-container");
 const listContainer = document.getElementById("js-list-container");
 const commentsContainer = document.getElementById("js-comments-container");
+const successMessage = document.getElementById("js-success-container");
+const commentError = document.getElementById("js-comment-error-container");
+
 const commentForm = document.getElementById("comment-form");
 const urlParams = new URLSearchParams(window.location.search);
 const postSlug = urlParams.get("slug");
 
 toggleHamburgerMenu();
-
 export function generateCardHTML(post) {
   const { title, author, date, excerpt, body } = post;
 
@@ -58,8 +60,8 @@ function generateCommentsListHTML(comments) {
   for (let i = 0; i < comments.length; i++) {
     html += `
     <div class="comment">
-      <p>By: ${comments[i].name}</p>
-      <p>${comments[i].comment}</p>
+      <p class="comment-name">By: ${comments[i].name}</p>
+      <p class="comment-comment"> ${comments[i].comment}</p>
     </div>
     `;
   }
@@ -128,17 +130,32 @@ const client = sanityClient({
   useCdn: false, // to ensure fresh data
 });
 
+successMessage.style.display = "none";
+
 commentForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
   const comment = document.getElementById("comment").value;
 
-  const result = await client.create({
-    _type: "comment",
-    name: name,
-    comment: comment,
-  });
+  try {
+    const result = await client.create({
+      _type: "comment",
+      name: name,
+      comment: comment,
+    });
 
-  console.log("Comment submitted", result);
+    // Hide the form and display the success message
+    commentForm.style.display = "none";
+    successMessage.style.display = "flex";
+    successMessage.innerHTML = `
+      <h2>Success</h2>
+      <h4>Thank You!</h4>
+    `;
+    console.log("Comment submitted", result);
+  } catch (error) {
+    console.error("Error submitting comment", error);
+    commentError.style.display = "flex";
+    commentError.innerHTML = error;
+  }
 });

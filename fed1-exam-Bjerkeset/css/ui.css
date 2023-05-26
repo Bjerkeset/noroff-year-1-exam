@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 4rem;
+  padding: 5rem 0;
   /* background-color: rgb(76, 76, 76); */
 }
 
@@ -19,7 +19,8 @@
   animation: loading-anime 2s linear infinite;
 }
 
-#js-error-container {
+#js-error-container,
+#js-comment-error-container {
   display: none;
   background-color: black;
   color: red;
@@ -103,6 +104,21 @@ h4 {
   padding: var(--padding-btn-cta-main);
   font-size: var(--font-size-btn-cta-main);
   font-weight: 600;
+}
+
+.scroll__button {
+  background: none;
+  color: #a8682f;
+  font-size: 2.4rem;
+  height: 50px;
+  margin: auto;
+  z-index: 102;
+}
+.scroll__button--right {
+  transform: translateX(-950px);
+}
+.scroll__button--left {
+  transform: translateX(+950px);
 }
 
 .button--hero-blogs {
@@ -214,6 +230,7 @@ h4 {
 .section__head__text--h2 h1 {
   font-size: var(--font-size-heading-h1);
   padding: 50px 0;
+  text-align: center;
 }
 
 .section__head__text--h2 {
@@ -291,7 +308,7 @@ h4 {
 
 .list__section {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   border-top: 1px solid #3b3a3b;
   min-height: 100vh;
@@ -314,22 +331,25 @@ h4 {
 .search__container {
   /* background-color: #b7b7b7; */
   margin: auto;
+  color: var(--clr-white);
 }
-.filter__container {
+
+.filter-and-sort__wrapper {
   /* background-color: #b7b7b7; */
   display: flex;
   justify-content: space-between;
+  color: var(--clr-white);
 }
 #search {
   height: 3rem;
   width: 300px;
 }
-#filter,
+#filter-select,
 #sort {
   width: 200px;
   text-align: center;
 }
-#filter,
+#filter-select,
 #search,
 #sort {
   background: transparent;
@@ -348,6 +368,7 @@ option {
   width: 90vw;
   max-width: 1000px;
   gap: 10px;
+  overflow-y: hidden;
   overflow-x: scroll; /* Enable horizontal scrolling if the content overflows */
 
   /* Hide scrollbar in WebKit browsers (Chrome, Safari, Opera) */
@@ -371,7 +392,6 @@ option {
 .blog__card {
   background-color: var(--clr-background-card-main);
   width: 300px;
-  /* margin: 10px; */
   height: 490px;
   display: flex;
   flex-direction: column;

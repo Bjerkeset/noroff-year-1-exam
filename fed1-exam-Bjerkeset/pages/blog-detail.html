@@ -73,26 +73,41 @@
             <h4>Blog</h4>
           </div>
           <div class="section__head-text section__head__text--h2">
-            <h1></h1>
+            <h1>Read our Blog</h1>
           </div>
         </div>
 
         <div id="js-list-container"></div>
         <div id="js-loading-indicator" class="loading-indicator"></div>
         <div id="js-error-container"></div>
-        <div id="js-comments-container" class="comments__container"></div>
 
         <form id="comment-form">
-          <div class="name__wrapper">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+          <div class="comment__heading">
+            <h4>COMMENTS</h4>
+            <h2>Tell us what you think!</h2>
           </div>
-          <div class="comment__wrapper">
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" required></textarea>
+
+          <div class="input__wrapper">
+            <div class="name__wrapper">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="comment__wrapper">
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="comment" required></textarea>
+            </div>
           </div>
-          <input type="submit" value="Submit" />
+
+          <input
+            class="submit__button button button--hero-blogs"
+            type="submit"
+            value="Submit"
+          />
         </form>
+        <div id="js-success-container"></div>
+        <div id="js-comment-error-container"></div>
+        <div id="js-comments-container" class="comments__container"></div>
+        <div class="padding__div"></div>
       </section>
       <div class="divider__div"></div>
     </main>
