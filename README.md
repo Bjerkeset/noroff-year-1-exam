@@ -25,13 +25,6 @@ This project was bootstrapped with Vite.
 
 - [API Endpoint] (https://npd35udx.api.sanity.io/v1/data/query/production)
 
-## Deployment
-
-Your deployment is done via static hosting provider (Vercel is recommended).
-YOu can update your deployment pipeling by editing the [vercel.json](https://vercel.com/docs/concepts/projects/project-configuration).
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FS3ak%2Ffed1-exam-vanilla-frontend-website&env=API_TOKEN,API_SECRET&envDescription=The%20API_TOKEN%20is%20needed%20to%20access%20a%20secure%20API%20endpoint.%20This%20can%20be%20the%20Authorization%20%60Bearer%20Token%60%20header%20used%20to%20make%20queries.&envLink=https%3A%2F%2Fvitejs.dev%2Fguide%2Fenv-and-mode.html&project-name=exam-front-end&repository-name=fed1-exam-vanilla-frontend-website&skippable-integrations=1)
-
 ## Report
 
 FED Project Exam 1 Report
@@ -175,8 +168,8 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] Removed all unused files.
 - [x] Named all images properly.
 - [x] Committed all my code to github.
-- [ ] My repo is publically viewable.
-- [ ] I've submitted/ written a report.
+- [x] My repo is publically viewable.
+- [x] I've submitted/ written a report.
 - [x] I've removed all todo notes in code.
 - [x] I've removed all console logs in code.
 - [x] Code is formatted correctly.
@@ -185,12 +178,7 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] My code is indented correctly.
 - [x] I've checked my report for grammer & spelling using grammerly or chatGPT
 - [x] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-- [ ] I've checked off every todo in this README.
-
-## Help & Tutorials
-
-- https://web.dev/learn/forms/
-- https://fed-vocational-astro-course.vercel.app/en/html-css/module-2/forms
+- [x] I've checked off every todo in this README.
 
 ## Application stack
 
