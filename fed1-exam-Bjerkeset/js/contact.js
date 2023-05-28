@@ -1,5 +1,6 @@
 import { toggleHamburgerMenu } from "./assets/navbar";
 import sanityClient from "@sanity/client";
+
 const errorContainer = document.getElementById("js-error-container");
 const formError = document.getElementById("js-form-error");
 const loadingIndicator = document.getElementById("js-loading-indicator");
