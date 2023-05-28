@@ -251,6 +251,7 @@ h4 {
   margin: 10px 10px 0 0;
   padding: 60px calc(5px + 2vw);
   max-width: 500px;
+  max-height: 230px;
 }
 
 .s-card__content {
