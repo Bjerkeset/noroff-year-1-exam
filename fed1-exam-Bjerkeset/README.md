@@ -49,9 +49,9 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a customer I can view validation message when they input an incorrect name.
 - [x] As a customer I can view validation message when they input an incorrect subject that is less than 15 characters.
 - [x] As a customer I can view validation message when they input an incorrect Email address.
-- [ ] As a customer I can view a validation message when they input an incorrect physical address that is less than 25 characters long.
-- [ ] As a customer I want to be able to view the latest blog posts on the home page.
-- [ ] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
+- [x] As a customer I can view a validation message when they input an incorrect physical address that is less than 25 characters long.
+- [x] As a customer I want to be able to view the latest blog posts on the home page.
+- [x] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
 - [x] As a customer I want to be able to view a list of all blog posts on the blog section.
 - [x] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
 - [x] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
@@ -69,14 +69,14 @@ All of these todo's must be done to pass the asssignment.
   - [x] Name ascending order
   - [x] Name descending order
 - [x] Confirmation modal after custumer submits a successful contact form.
-- [ ] End-user can auto-fill the contact form using the browser auto-fill.
+- [x] End-user can auto-fill the contact form using the browser auto-fill.
 - [x] End-user can auto-fill the contact form using a password manager.
 - [x] Validation still works when End-user uses copy and pastes into input fields.
 - [x] End-user can see a postive feedback when they input correct info and pass validation.
 - [x] End-user can experience pleasant animations.
-- [ ] End-user needs to prove there are human using a captcha feature on the contact form.
+- [x] End-user needs to prove there are human using a captcha feature on the contact form.
   - [x] Each item in the list has a staggered animation.
-  - [ ] Contact form success modal fades in.
+  - [x] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
 - [x] CSS uses variables
 - [x] Code is dry - There are no repeating functions, variables.
@@ -87,59 +87,59 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [x] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
-- [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
+- [x] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
 
-  - [ ] Is user-friendly
-  - [ ] Effective use of the pillars of design
-    - [ ] Typography
-    - [ ] Colour
-    - [ ] Composition
-    - [ ] Art Direction
-    - [ ] Motion
-  - [ ] Adhered to principles of design
-    - [ ] Contrast
-    - [ ] Balance and alignment
-    - [ ] Emphasis
-    - [ ] Proportion
-    - [ ] Hiearchy
-    - [ ] Repetition
-    - [ ] Ryhthem
-    - [ ] Pattern
-    - [ ] Negative space
-    - [ ] Movement
+  - [x] Is user-friendly
+  - [x] Effective use of the pillars of design
+    - [x] Typography
+    - [x] Colour
+    - [x] Composition
+    - [x] Art Direction
+    - [x] Motion
+  - [x] Adhered to principles of design
+    - [x] Contrast
+    - [x] Balance and alignment
+    - [x] Emphasis
+    - [x] Proportion
+    - [x] Hiearchy
+    - [x] Repetition
+    - [x] Ryhthem
+    - [x] Pattern
+    - [x] Negative space
+    - [x] Movement
 
 ## Checklist
 
 Make sure you go through this checklist before submitting your project to Moodle.
 
-- [ ] All pages have a meta description.
-- [ ] All pages have a valid title.
-- [ ] All pages import the correct css files.
-- [ ] All pages import the correct JS file.
-- [ ] Details page URL includes a query param.
-- [ ] My website makes a GET request to an API to get a list of results.
-- [ ] My website makes a GET request to an API to get details of one result.
-- [ ] Input fields have the following attributes;
-- [ ] All images have an alt tag;
-  - [ ] A name,
-  - [ ] A placeholder,
-  - [ ] A aria-describedby,
-  - [ ] Required
-- [ ] I have not copied Javascript code.
-- [ ] I have not used a Javascript library.
-- [ ] Removed all unused files.
-- [ ] Named all images properly.
-- [ ] Committed all my code to github.
+- [x] All pages have a meta description.
+- [x] All pages have a valid title.
+- [x] All pages import the correct css files.
+- [x] All pages import the correct JS file.
+- [x] Details page URL includes a query param.
+- [x] My website makes a GET request to an API to get a list of results.
+- [x] My website makes a GET request to an API to get details of one result.
+- [x] Input fields have the following attributes;
+- [x] All images have an alt tag;
+  - [x] A name,
+  - [x] A placeholder,
+  - [x] A aria-describedby,
+  - [x] Required
+- [x] I have not copied Javascript code.
+- [x] I have not used a Javascript library.
+- [x] Removed all unused files.
+- [x] Named all images properly.
+- [x] Committed all my code to github.
 - [ ] My repo is publically viewable.
 - [ ] I've submitted/ written a report.
-- [ ] I've removed all todo notes in code.
-- [ ] I've removed all console logs in code.
-- [ ] Code is formatted correctly.
-- [ ] There are no red underlines in VSCode.
-- [ ] There are no error messages in the terminal when I run the project.
-- [ ] My code is indented correctly.
-- [ ] I've checked my report for grammer & spelling using grammerly or chatGPT
-- [ ] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [x] I've removed all todo notes in code.
+- [x] I've removed all console logs in code.
+- [x] Code is formatted correctly.
+- [x] There are no red underlines in VSCode.
+- [x] There are no error messages in the terminal when I run the project.
+- [x] My code is indented correctly.
+- [x] I've checked my report for grammer & spelling using grammerly or chatGPT
+- [x] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [ ] I've checked off every todo in this README.
 
 ## Help & Tutorials
