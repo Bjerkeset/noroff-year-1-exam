@@ -11,14 +11,19 @@ This project was bootstrapped with Vite.
 
 ## Resources
 
-<!-- You must replace these links -->
+- [Brief] https://fed-vocational-astro-course.vercel.app/en/exam-1/brief
 
-- [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
-- [Production deploy](_LINK_TO_WEBSITE_)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
-- [API Docs](_LINK_TO_API_DOCS_)
-- [API Endpoint](_LINK_TO_API_DOC)
+- [Design] (https://www.figma.com/file/fUyB7KOpKcnfweVJu42HGU/Project-Exam?type=design&node-id=25%3A103&t=F6UBu64Xfu3XM2qg-1)
+
+- [Production deploy] (https://fed1-exam-project-bjerkeset.vercel.app/)
+
+- [GitHub] (https://github.com/Bjerkeset/fed1-exam-project-Bjerkeset)
+
+- [Deployment CI] (https://vercel.com/bjerkeset/fed1-exam-project-bjerkeset)
+
+- [API Docs] (https://www.sanity.io/docs)
+
+- [API Endpoint] (https://npd35udx.api.sanity.io/v1/data/query/production)
 
 ## Deployment
 
@@ -29,7 +34,47 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+FED Project Exam 1 Report
+Author: Bendik Bjerkeset
+
+Introduction
+
+During this semester, I undertook the task of creating a blog website for a fictional web development team. The site's primary purpose was to act as a lead generation tool for the company, collecting useful customer information and serving as a platform to showcase the team's capabilities. The website features five main pages that users can navigate to learn more about the company's values, services, and expertise.
+
+A standout feature is the price calculator, an interactive tool that estimates service costs based on user inputs. It serves to project a sense of professionalism, establish trust, and gather information about potential clients' needs. Another prominent feature is the blog section. Visitors can preview and explore the company's latest blog entries, gaining insights into industry trends and the team's perspectives.
+The design strategically leads users towards a call-to-action (CTA), encouraging them to complete a contact form.
+
+Theme Selection
+
+The theme for the blog was selected to be primarily a dark theme, complemented with two colors - orange/gold and blue. These colors were used strategically for specific details and features. Orange/gold was used for primary details, while blue was designated for links and Call-to-Action buttons. The site's aesthetics, tone, and content were designed to appeal to potential clients, showcasing the team's technical abilities to deliver tailored, high-quality services.
+
+Design Prototyping
+
+For the prototyping phase, Figma was utilized to create a high and low-fidelity design. This allowed me to visualize and fine-tune the layout, design elements, and user flow before diving into the development process.
+
+Front-End Development
+
+The front-end of the website was developed using a combination of HTML, CSS, and JavaScript. CSS variables played a crucial role in ensuring standardization of colors and sizes across the site, contributing to a consistent look and feel.
+
+In terms of JavaScript, ES6 was utilized to promote code reusability. This approach allowed for functions to be reused across different pages of the site, adhering to the DRY (Don't Repeat Yourself) principle, which enhances code maintainability and readability.
+
+A significant portion of the HTML content was dynamically generated via JavaScript functions. This content was rendered based on the data received from the REST API, allowing for real-time updates and interactivity. This method of development enhanced the site's responsiveness and usability, ultimately leading to an improved user experience.
+
+Back-End Development
+
+The back-end of the project was developed using Sanity, a content management system. This choice came after an attempt to use Strapi, which proved challenging in the deployment phase due to database management issues. Sanity offered a seamless experience, and as a bonus, was free. The platform allows non-technical users to create their own types, while the developers can fetch the Sanity API to display it on the site.
+
+User Experience
+
+Ensuring a positive user experience was paramount in the design and development of the site. Responsiveness was achieved through CSS view-width and max-width configuration, as well as the use of REM and variable font sizes. This made the site accessible to users on various devices, from mobile phones to desktop computers.
+
+User Testing and Feedback
+
+Towards the end of the project, the website was shared with several individuals for user testing. Feedback was collected both verbally and through Hotjar, a behavior analytics tool installed on the site. This allowed for observation of user navigation patterns and identification of areas requiring improvement.
+
+Conclusion
+
+Building a blog website for a fictional web development team has been an engaging and educational process. Through this project, I was able to apply the skills and knowledge gained throughout the course, including front-end and back-end development, design prototyping, project management, and user experience design.
 
 ## Getting Started
 
