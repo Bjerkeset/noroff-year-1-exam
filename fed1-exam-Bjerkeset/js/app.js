@@ -1,4 +1,3 @@
-// import { applyMouseEffect } from "./assets/mouseeffect";
 import { applyMouseEffect } from "./assets/mouseEffect";
 import { toggleHamburgerMenu } from "./assets/navbar";
 
@@ -65,7 +64,6 @@ async function fetchBlogPosts() {
     //Create and append carusell left buttons
     const scrollLeftButton = document.createElement("button");
     scrollLeftButton.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
-
     scrollLeftButton.className = "scroll__button scroll__button--left ";
     cardContainer.appendChild(scrollLeftButton);
 
@@ -84,7 +82,6 @@ async function fetchBlogPosts() {
 
       const maxScrollLeft =
         cardContainer.scrollWidth - cardContainer.offsetWidth;
-      console.log(maxScrollLeft);
 
       //Add an on click event for blog cards.
       blogCardWrapper.addEventListener("click", function () {
@@ -116,7 +113,6 @@ async function fetchBlogPosts() {
     cardContainer.addEventListener("scroll", toggleScrollButtonVisibility);
 
     scrollRightButton.addEventListener("click", function () {
-      console.log("right click");
       cardContainer.scrollLeft -= 1000;
     });
 
@@ -138,7 +134,7 @@ async function fetchBlogPosts() {
 
 fetchBlogPosts();
 
-// Intersection observer
+// Intersection observer for fade-in services cards
 const observer = new IntersectionObserver((entries) => {
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];

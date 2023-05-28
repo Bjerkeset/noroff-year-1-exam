@@ -25,7 +25,6 @@ toggleHamburgerMenu();
 
 loadingIndicator.style.display = "none";
 successMessage.style.display = "none";
-// This function validates an individual input
 function validateInput(input, minLength) {
   const value = input.value;
 
@@ -101,7 +100,7 @@ form.addEventListener("submit", function (event) {
   ).value;
 
   if (!recaptchaResponse) {
-    // reCAPTCHA was not solved; show an error message and stop form submission
+    // show an error message and stop form submission
     formError.textContent = "Please solve the reCAPTCHA";
     return;
   }
@@ -112,8 +111,6 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  // TODO: submit and hide the form. Display success msg.
-  console.log("form is valid");
   form.style.display = "none";
   successMessage.style.display = "block";
 });

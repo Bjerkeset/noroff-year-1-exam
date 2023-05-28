@@ -1,4 +1,3 @@
-// Select HTML elements and store references in variables
 const start = document.getElementById("start");
 const next1 = document.getElementById("next1");
 const next2 = document.getElementById("next2");
@@ -13,7 +12,6 @@ const finalPrice = document.getElementById("final-price");
 const calculator = document.querySelector(".calculator");
 const calculatorH2 = document.querySelector(".calculator__h2");
 const calculatorIntroText = document.querySelector(".calculator__intro-text");
-// const question = document.querySelector(".question");
 
 const radioButtonGroup1 = document.querySelectorAll('input[name="q1"]');
 const radioButtonGroup2 = document.querySelectorAll('input[name="q2"]');
@@ -48,13 +46,6 @@ const answerValues = {
     q8: 2000,
   },
 };
-// let currentSlideNumber = 0;
-
-// function logActiveSlideNumber() {
-//   console.log("Current slide number:", currentSlideNumber);
-//   const slideNumberElement = document.getElementById("slide-number");
-//   slideNumberElement.innerHTML = `Current slide number: ${currentSlideNumber}`;
-// }
 
 // Hide the current element and display the next one
 function showNextQuestion(current, next) {
@@ -105,7 +96,6 @@ submit.addEventListener("click", (event) => {
   for (let i = 1; i <= 8; i++) {
     const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
     totalPrice += answerValues[answer][`q${i}`];
-    console.log(i);
   }
 
   // Update the finalPrice element with the calculated totalPrice formatted as a dollar amount

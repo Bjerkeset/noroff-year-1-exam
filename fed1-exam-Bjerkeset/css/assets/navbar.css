@@ -1,48 +1,34 @@
 .navbar__container {
   display: flex;
   align-items: center;
-  /* background-color: rgb(30, 70, 104); */
   justify-content: space-between;
-  /* width: 100vw; */
 }
 
 .branding__container {
   background-image: url(../../assets/images/logo-resized-full-size.png);
-  /* padding: 2rem 3rem; */
   background-size: cover;
-  /* margin-left: 1rem; */
-  /* background-color: aqua; */
+  width: 75px;
+  height: 60px;
 }
 
 .navbar__list {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: center; */
   height: 50px;
-  /* background-color: rgb(79, 92, 103); */
-  /* width: 100vw; */
-  /* height: 100vh; */
 }
 
 .navbar__list-ul {
-  /* background-color: rgb(42, 51, 60); */
   display: flex;
   width: 100%;
   height: 100vh;
-  /* max-width: ; */
   padding: 20vh 0 0 0;
   margin: auto;
-  /* justify-content: center; */
   align-items: center;
   top: 0px;
-  /* left: -20; */
   position: absolute;
   flex-direction: column;
   backdrop-filter: blur(6px);
-  /* overflow: hidden; */
-  /* width: 100%; */
-  /* text-align: center; */
   transition: left 0.3s ease-out;
   z-index: 101;
   left: -120%;
@@ -56,10 +42,6 @@
   position: relative;
   text-decoration: none;
   font-size: 1.2rem;
-  /* padding-bottom: 2rem; */
-  /* font-weight: 1000; */
-  /* color: rgba(242, 153, 74, 1); */
-  /* color: var(--clr-p-text); */
   color: var(--clr-background-blog);
   transition: color 0.35s ease-in-out;
 }
@@ -72,7 +54,6 @@
   width: 0;
   height: 2px;
   background-color: var(--clr-btn-main);
-  /* background-color: rgba(242, 153, 74, 1);;  */
   transition: width 0.2s ease-in-out;
 }
 
@@ -82,13 +63,6 @@
 .navbar__a:hover {
   color: var(--clr-btn-main);
 }
-
-/* .navbar__branding {
-  visibility: hidden;
-  position: absolute;
-  width: 80px;
-  top: 5px;
-} */
 
 .navbar__list .is-active {
   left: 0;
@@ -109,7 +83,6 @@
 }
 .hamburger__bar {
   display: block;
-  /* position: absolute; */
   width: 25px;
   height: 3px;
   margin: 5px auto;
@@ -129,7 +102,6 @@
 
   .navbar__list {
     backdrop-filter: blur(0px);
-    /* width: 100vw; */
   }
   .navbar__list-ul {
     display: flex;
@@ -145,10 +117,6 @@
   .navbar__list-ul li {
     display: flex;
     padding: 0 2rem;
-  }
-
-  .navbar__container:hover .navbar__list ul li {
-    /* color: var(); */
   }
 }
 

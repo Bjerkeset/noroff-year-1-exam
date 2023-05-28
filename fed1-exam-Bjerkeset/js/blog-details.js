@@ -8,7 +8,6 @@ const listContainer = document.getElementById("js-list-container");
 const commentsContainer = document.getElementById("js-comments-container");
 const successMessage = document.getElementById("js-success-container");
 const commentError = document.getElementById("js-comment-error-container");
-
 const commentForm = document.getElementById("comment-form");
 const urlParams = new URLSearchParams(window.location.search);
 const postSlug = urlParams.get("slug");
@@ -53,7 +52,6 @@ export function generateCardHTML(post) {
   }
 
   const imageUrl = getUrlFromReference(mainImage.asset._ref);
-  console.log("image url", imageUrl);
   return `
     <div class="blog__details " >
       <div class="card__details card__details--title">
@@ -109,7 +107,18 @@ async function fetchBlogPost() {
     const blogHTML = generateCardHTML(post);
     listContainer.innerHTML = blogHTML;
 
-    console.log("post", post);
+    // Toggel image size
+    const expandableImage = document.getElementById("expandable-image");
+    expandableImage.addEventListener("click", function (event) {
+      event.stopPropagation();
+      this.classList.toggle("expanded");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (expandableImage.classList.contains("expanded")) {
+        expandableImage.classList.remove("expanded");
+      }
+    });
   } catch (error) {
     console.error("Error fetching blog post:", error);
     errorContainer.style.display = "block";
@@ -133,20 +142,8 @@ async function fetchBlogComments() {
     const data = await response.json();
     const comments = data.result;
 
-    const expandableImage = document.getElementById("expandable-image");
-
-    expandableImage.addEventListener("click", function (event) {
-      event.stopPropagation();
-      this.classList.toggle("expanded");
-    });
-
-    document.addEventListener("click", function (event) {
-      if (expandableImage.classList.contains("expanded")) {
-        expandableImage.classList.remove("expanded");
-      }
-    });
-
-    console.log("comments", comments);
+    const commentsHTML = generateCommentsListHTML(comments);
+    commentsContainer.innerHTML = commentsHTML;
   } catch (error) {
     console.error("Error fetching blog post:", error);
     errorContainer.style.display = "block";
@@ -186,7 +183,6 @@ commentForm.addEventListener("submit", async function (event) {
       <h2>Success</h2>
       <h4>Thank You!</h4>
     `;
-    console.log("Comment submitted", result);
   } catch (error) {
     console.error("Error submitting comment", error);
     commentError.style.display = "flex";

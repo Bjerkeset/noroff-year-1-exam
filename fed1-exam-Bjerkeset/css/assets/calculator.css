@@ -4,7 +4,6 @@
 }
 
 .calculator__container {
-  /* background-color: rgb(107, 131, 152); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,9 +16,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  /* width: 750px; */
   color: var(--clr-h4);
-  /* background-color: #1c1d22; */
   height: 500px;
   overflow: hidden;
 }
@@ -47,8 +44,6 @@
 }
 
 .calculator__h2 {
-  /* align-self: flex-start; */
-  /* background-color: #1c1d22; */
   margin-bottom: 350px;
   border-bottom: 2px solid #3b3a3b;
 }
@@ -57,58 +52,6 @@
 .calculator__intro-text p {
   color: #c3c1c3;
 }
-/* 
-.start__button button {
-  border: 2px solid var(--clr-btn-main);
-  background: transparent;
-  width: 200px;
-  height: 50px;
-  border-radius: 20px;
-  font-size: 1.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.start__button button .button-text {
-  position: relative;
-  z-index: 2;
-}
-
-.start__button button::before,
-.start__button button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: rgb(0, 0, 0, 0.8);
-  transition: transform 0.5s;
-  z-index: 1;
-}
-
-.start__button button::before {
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-}
-
-.start__button button::after {
-  right: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.start__button button:hover .button-text {
-  color: white;
-}
-
-.start__button button:hover::before {
-  transform: scaleX(1);
-}
-
-.start__button button:hover::after {
-  transform: scaleX(1);
-} */
 
 .question {
   position: absolute;
@@ -122,14 +65,12 @@
   box-sizing: border-box;
   opacity: 0;
   transform: translateX(-100%);
-  /* overflow: hidden; */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in;
   backdrop-filter: blur(10px);
 }
 .calculator.active,
 .question {
   width: clamp(300px, 90vw, 750px);
-  /* height: -100px; */
 }
 
 .calculator.active {
@@ -137,7 +78,6 @@
 }
 
 .question__h2 {
-  /* background-color: #3b3a3b; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,15 +95,7 @@
   background-color: rgba(0, 0, 0, 0.75);
   background-image: var(--clr-gradient-background-main);
   padding: 4rem;
-  /* height: 1000px; */
-  /* width: clamp(300px, 90vw, 750px); */
-  /* width: inherit; */
-  /* height: calc(inherit + 5rem); */
-  /* padding-top: 5rem; */
   border-radius: 10px;
-  /* width: inherit; */
-  /* height: inherit; */
-  /* transition: all 1s ease-in-out; */
 }
 .result h2 {
   padding: 0 1rem;

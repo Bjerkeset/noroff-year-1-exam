@@ -9,7 +9,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Contact our developer team" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, strapi" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, sainty" />
     <meta name="author" content="B.Bjerkeset" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="../css/assets/contact.css" />
@@ -41,7 +41,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Blog | Api-ary</title>
+    <title>Contact | Api-ary</title>
   </head>
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
@@ -117,18 +117,32 @@
           <div class="form__container">
             <span id=" "></span>
             <form id="form" action="#" method="post">
-              <input type="text" id="name" name="name" placeholder="Name" />
-              <input type="text" id="email" name="email" placeholder="Email" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
               <input
                 type="text"
                 id="subject"
                 name="subject"
                 placeholder="Subject"
+                required
               />
               <textarea
                 id="message"
                 name="message"
                 placeholder="Message"
+                required
               ></textarea>
               <div
                 class="g-recaptcha"
@@ -200,16 +214,16 @@
         </div>
         <div class="footer-nav__container">
           <ul class="footer-nav__list">
-            <a href="./index.html"
+            <a href="../index.html"
               ><li class="footer-nav__list-item">HOME</li></a
             >
-            <a href="./pages/blogs.html"
+            <a href="./blogs.html"
               ><li class="footer-nav__list-item">BLOG</li></a
             >
-            <a href="./pages/about.html"
+            <a href="./about.html"
               ><li class="footer-nav__list-item">ABOUT</li></a
             >
-            <a href="./pages/contact.html"
+            <a href="./contact.html"
               ><li class="footer-nav__list-item">CONTACT</li></a
             >
           </ul>

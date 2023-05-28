@@ -1,3 +1,4 @@
+// SOURCE: Inspired by https://www.youtube.com/watch?v=htGfnF1zN4g
 export function applyMouseEffect() {
   const handleOnMouseMove = (e) => {
     const { currentTarget: target } = e;

@@ -1,7 +1,6 @@
 body {
   margin: 0;
   width: 100%;
-  /* min-width: 300px; */
   background-image: var(--clr-gradient-background-main);
   display: flex;
   flex-direction: column;
@@ -13,15 +12,12 @@ body {
   flex-direction: column;
   width: 100%;
   background: none;
-  /* background-color: aliceblue; */
 }
 
 .l-main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* flex-grow: 1; */
-  /* This will allow main section to take remaining space after allocating space for header and footer */
 }
 
 .l-footer {

@@ -1,15 +1,15 @@
 import { applyMouseEffect } from "./assets/mouseEffect";
 import { toggleHamburgerMenu } from "./assets/navbar";
 
-applyMouseEffect();
-toggleHamburgerMenu();
-
 const listContainer = document.getElementById("js-list-container");
 const loadingIndicator = document.getElementById("js-loading-indicator");
 const errorContainer = document.getElementById("js-error-container");
 const search = document.getElementById("search");
 const sortSelect = document.getElementById("sort");
 const authorFilter = document.getElementById("filter-select");
+
+applyMouseEffect();
+toggleHamburgerMenu();
 
 //Keeps track of posts to be rendered.
 let currentPosts = 6;
@@ -38,10 +38,6 @@ export function generateCardHTML(post) {
     </div>
   `;
 }
-
-const arrowBtn = document.getElementById("js-card-btn-arrow");
-console.log(arrowBtn);
-
 //Generates Show-more button
 function generateShowBlogsButtonHTML() {
   return `
@@ -55,8 +51,6 @@ let posts = [];
 
 //Fetches blog post from Sanity CMS
 async function fetchBlogPosts() {
-  // Displays loading indicator
-  // loadingIndicator.style.display = "block";
   try {
     const response = await fetch(
       'https://npd35udx.api.sanity.io/v1/data/query/production?query=*[_type == "blogPost"]'
@@ -68,7 +62,6 @@ async function fetchBlogPosts() {
 
     const responseData = await response.json();
     posts = responseData.result;
-    console.log(posts);
 
     renderPosts(posts);
   } catch (error) {
@@ -97,7 +90,7 @@ function renderPosts(posts) {
     filteredPosts = posts.filter((post) => post.author === selectedAuthor);
   }
 
-  // sort ascending and descending
+  // Sort ascending and descending
   const sortOption = sortSelect.value;
   if (sortOption === "ascending") {
     filteredPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -157,7 +150,6 @@ search.addEventListener("input", (event) => {
       `${post.title} ${post.author} ${post.excerpt} `.toLowerCase();
     return searchTerms.every((term) => postContent.includes(term));
   });
-
   renderPosts(filteredPosts);
 });
 

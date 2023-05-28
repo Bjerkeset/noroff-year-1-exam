@@ -14,7 +14,6 @@
 }
 
 .card__details--title {
-  /* background-color: lavender; */
   margin: auto;
   font-size: clamp(2rem, 2vw, 4rem);
   line-height: clamp(2.3rem, 2vw, 3rem);
@@ -25,14 +24,12 @@
 }
 
 .card__details--author {
-  /* background-color: lavender; */
   font-size: clamp(1.5rem, 2vw, 2rem);
   padding: 2rem 0;
   margin: auto;
 }
 
 .card__details--image {
-  /* width: 60%; */
   margin: auto;
 }
 
@@ -48,7 +45,7 @@
   width: 90vw;
   height: 90vh;
   object-fit: contain;
-  z-index: 100; /* Ensure the image is on top of everything else */
+  z-index: 102;
 }
 
 .card__details--image:hover {
@@ -56,13 +53,11 @@
 }
 
 .card__details--date {
-  /* background-color: lavender; */
   margin: auto;
   padding: 1rem 0;
 }
 
 .card__details--excerpt {
-  /* background-color: azure; */
   padding: 1rem 0;
 }
 .card__details--body-even {
@@ -73,23 +68,12 @@
   display: inline-block;
   margin-bottom: 1em;
 }
-.body-part.even {
-  /* background-color: aliceblue; */
-  /* font-weight: 600; */
-  /* margin-bottom: 50px; */
-  /* font-size: 1.2rem; */
-}
+
 .body-part.even::after,
 .body-part.odd::after {
   padding-bottom: 50px;
   content: "\A";
   white-space: pre;
-}
-
-.card__details--body {
-}
-
-.card__details--btn {
 }
 
 /* ------Comment Section------ */
@@ -110,7 +94,6 @@
 }
 
 .comments__container {
-  /* background-color: var(--clr-background-blog); */
   width: 500px;
   max-width: 90vw;
   display: flex;
@@ -119,9 +102,6 @@
   flex-direction: column;
   max-height: 270px;
   overflow-y: scroll;
-  /* padding-bottom: 5rem; */
-  /* margin-bottom: 5rem; */
-
   /* Hide scrollbar in WebKit browsers (Chrome, Safari, Opera) */
   &::-webkit-scrollbar {
     display: none;
@@ -156,21 +136,17 @@
 
 .comment-name {
   margin: auto;
-  /* background-color: rgb(50, 50, 50); */
   padding: 0.3rem 2rem;
-  /* border-radius: 20px; */
 }
 .comment-comment {
   background-color: rgb(29, 29, 29);
   padding: 0.5rem;
-  /* background-color: rgb(95, 113, 130); */
   border-radius: 5px;
 }
 
 #comment-form {
   display: flex;
   flex-direction: column;
-  /* background-color: beige; */
   margin: auto;
   padding: 1rem;
 }
@@ -194,11 +170,9 @@
   outline: none;
 }
 textarea {
-  /* width: auto; */
   width: 400px;
   height: 100px;
   max-width: 82vw;
-  /* resize: none; */
 }
 label {
   color: var(--clr-h4);
