@@ -1,13 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/EF97x2Z3)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10979648&assignment_repo_type=AssignmentRepo)
+# Project Exam Bjerkeset
 
-# FED Exam - Vanilla Front-end Website
-
-This bootstrap template is intended to help you deliever a amazing website which delights your end-users. Feel free to change, remove or start your own project from scratch. Please replace any text which starts with an `_`.
-
-This is a vanilla website that displays a list of items fetched from an API.
-
-This project was bootstrapped with Vite.
+This is a standard blog website created for a hypothetical web development team. The primary features of the website are designed to collect customer data, specifically targeting user behavior and intentions. This will aid in understanding their needs and preferences, ultimately resulting in a more personalized and efficient user experience.
 
 ## Resources
 
@@ -71,11 +64,31 @@ Building a blog website for a fictional web development team has been an engagin
 
 ## Getting Started
 
-In the project directory, you can run:
+### Installing
 
-- install the project node module dependencies $`npm i`
-- Runs the app in the development mode. `npm run dev`
-- Open `http://0.0.0.0:5173/` to view it in the browser.
+1. Clone the repo:
+
+```bash
+git clone git@github.com:Bjerkeset/CA-Interaction-design-Bendik-Bjerkeset
+```
+
+```
+cd fed1-exam-Bjerkeset
+```
+
+3. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+To run the app, run the following commands:
+
+```bash
+npm run dev
+```
 
 ## Minimum acceptence criteria (Required - 50%)
 
@@ -193,3 +206,7 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 - Bendik Bjerkeset (@Bjerkeset)
 - Monde Sineke (@S3ak)
+
+## Contact
+
+Email: bendik@bjerkeset.dev
