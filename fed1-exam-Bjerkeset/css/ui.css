@@ -304,10 +304,8 @@ h4 {
 }
 
 .control-panel {
-  margin: auto;
   display: flex;
   flex-direction: column;
-  width: 930px;
   min-width: 300px;
   margin-bottom: 2rem;
   justify-content: center;
@@ -322,8 +320,10 @@ h4 {
 
 .filter-and-sort__wrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 0.5rem;
+  justify-content: space-around;
   color: var(--clr-white);
+  flex-wrap: wrap;
 }
 #search {
   height: 3rem;
