@@ -1,7 +1,7 @@
 body {
   margin: 0;
   width: 100%;
-  background-image: var(--clr-gradient-background-main);
+background-color: black;
   display: flex;
   flex-direction: column;
   height: auto;
